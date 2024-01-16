@@ -1,0 +1,23 @@
+import React, { useState, useEffect } from 'react';
+import Web3 from 'web3';
+
+// Paste the deployed contract address and ABI available in Remix
+const contractABI = [...];
+const contractAddress = '...';
+
+function App() {
+  const [web3, setWeb3] = useState(null);
+  const [balance, setBalance] = useState(0);
+
+  useEffect(() => {
+    // Initialize the contract
+    const provider = new Web3.providers.HttpProvider('...'); // Connect to a provider
+    setWeb3(new Web3(provider));
+
+    // Load the contract
+    const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+    // Getting initial balance
+    contract.methods.CheckBalance().call().then(setBalance);
+  }, []);
+}
