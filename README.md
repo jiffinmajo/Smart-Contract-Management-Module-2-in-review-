@@ -14,3 +14,5 @@ For this module i have created a contract using some functions called MyBank.
 2. Fetch Contract Address: Retrieve the deployed contract's address.
 3. Create Contract Instance: Use Web3.js to create a contract instance for interaction.
 4. Call Contract Functions: Use the contract instance to call functions like getBalance(), deposit(), and withdraw(), passing necessary parameters and handling responses.
+
+Loom: https://www.loom.com/share/807d9915073244e8819fad125fa9de20?sid=893acc35-c6ec-41c3-8f4a-a17c68c5ad9b
